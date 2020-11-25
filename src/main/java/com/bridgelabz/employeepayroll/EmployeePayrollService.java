@@ -1,9 +1,11 @@
 package com.bridgelabz.employeepayroll;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeePayrollService {
+
     public enum IOService{FILE_IO, DB_IO, REST_IO}
     private List<EmployeePayrollData> employeePayrollList;
     private static EmployeePayrollDBService employeePayrollDBService;
@@ -14,6 +16,7 @@ public class EmployeePayrollService {
 
     public EmployeePayrollService(List<EmployeePayrollData> employeePayrollList) {
         this();
+        System.out.println(employeePayrollList);
         this.employeePayrollList = new ArrayList<>(employeePayrollList);
     }
 
@@ -30,4 +33,19 @@ public class EmployeePayrollService {
         }
         return this.employeePayrollList;
     }
+
+    public void addEmployeeToPayroll(EmployeePayrollData employeePayrollData, IOService ioService) {
+        if (ioService.equals(IOService.DB_IO)) {
+            this.addEmployeeToPayroll(employeePayrollData.name, employeePayrollData.salary, employeePayrollData.startDate, employeePayrollData.gender);
+        }
+        else {
+            boolean add = employeePayrollList.add(employeePayrollData);
+            System.out.println(add);
+        }
+    }
+    public void addEmployeeToPayroll(String name, double salary, LocalDate startDate, String gender) {
+        employeePayrollList.add(employeePayrollDBService.addEmployeeToPayroll(name, salary, startDate, gender));
+    }
+
+
 }
