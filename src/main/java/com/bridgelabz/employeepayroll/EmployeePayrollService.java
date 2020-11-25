@@ -47,5 +47,20 @@ public class EmployeePayrollService {
         employeePayrollList.add(employeePayrollDBService.addEmployeeToPayroll(name, salary, startDate, gender));
     }
 
+    public void updateEmployeeSalary(String name, double salary, IOService ioService){
+        if (ioService.equals(IOService.DB_IO)) {
+            int result = employeePayrollDBService.updateEmployeeData(name, salary);
+            if (result == 0) return;
+        }
+        EmployeePayrollData employeePayrollData=this.getEmployeePayrollData(name);
+        if (employeePayrollData != null) employeePayrollData.salary = salary;
+    }
+
+    public EmployeePayrollData getEmployeePayrollData(String name) {
+        return this.employeePayrollList.stream()
+                .filter(employeePayrollData -> employeePayrollData.name.equals(name))
+                .findFirst()
+                .orElse(null);
+    }
 
 }

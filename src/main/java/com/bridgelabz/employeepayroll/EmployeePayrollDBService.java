@@ -82,4 +82,23 @@ public class EmployeePayrollDBService {
         }
         return employeePayrollData;
     }
+
+    public int updateEmployeeData(String name, double salary) {
+        try {
+            return this.updateDataUsingStatement(name, salary);
+        } catch (EmployeePayrollException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    private int updateDataUsingStatement(String name, double salary) throws EmployeePayrollException {
+        String query = String.format("update employee_payroll set salary = %.2f where name= '%s' and is_active=1;", salary, name);
+        try (Connection connection = this.getConnection()) {
+            Statement statement = connection.createStatement();
+            return statement.executeUpdate(query);
+        }catch (SQLException e) {
+            throw new EmployeePayrollException(e.getMessage(), EmployeePayrollException.ExceptionType.DatabaseException);
+        }
+    }
 }
