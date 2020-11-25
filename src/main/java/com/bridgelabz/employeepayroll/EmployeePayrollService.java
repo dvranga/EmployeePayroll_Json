@@ -63,4 +63,12 @@ public class EmployeePayrollService {
                 .orElse(null);
     }
 
+    public void deleteEmployeePayroll(String name, IOService restIo) {
+        if (restIo.equals(IOService.REST_IO)) {
+            EmployeePayrollData employeePayrollData = this.getEmployeePayrollData(name);
+            employeePayrollList.remove(employeePayrollData);
+        }
+    }
+
+
 }

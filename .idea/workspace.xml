@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d4c50d3-9c20-48f7-86e7-21926bfbfad6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/employeepayroll/EmployeePayrollException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/employeepayroll/EmployeePayrollDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/employeepayroll/EmployeePayrollDBService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/employeepayroll/EmployeePayrollService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/employeepayroll/EmployeePayrollService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/bridgelabz/employeepayroll/EmployeePayrollTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bridgelabz/employeepayroll/EmployeePayrollTest.java" afterDir="false" />
     </list>
@@ -49,7 +47,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EmployeePayrollTest.givenNewSalaryForEmployee_WhenUpdated_ShouldMatch200Response">
+  <component name="RunManager" selected="JUnit.EmployeePayrollTest.givenEmployeeToDelete_WhenDeleted_ShouldMatch200ResponseAndCount">
     <configuration name="EmployeePayrollTest.givenEmployeeDataInJSONServer_WhenRetrieved_ShouldMatchTheCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="employeepayrolljson" />
       <extension name="coverage">
@@ -61,6 +59,22 @@
       <option name="PACKAGE_NAME" value="com.bridgelabz.employeepayroll" />
       <option name="MAIN_CLASS_NAME" value="com.bridgelabz.employeepayroll.EmployeePayrollTest" />
       <option name="METHOD_NAME" value="givenEmployeeDataInJSONServer_WhenRetrieved_ShouldMatchTheCount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeePayrollTest.givenEmployeeToDelete_WhenDeleted_ShouldMatch200ResponseAndCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="employeepayrolljson" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bridgelabz.employeepayroll.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bridgelabz.employeepayroll" />
+      <option name="MAIN_CLASS_NAME" value="com.bridgelabz.employeepayroll.EmployeePayrollTest" />
+      <option name="METHOD_NAME" value="givenEmployeeToDelete_WhenDeleted_ShouldMatch200ResponseAndCount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,6 +130,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeePayrollTest.givenEmployeeToDelete_WhenDeleted_ShouldMatch200ResponseAndCount" />
         <item itemvalue="JUnit.EmployeePayrollTest.givenNewSalaryForEmployee_WhenUpdated_ShouldMatch200Response" />
         <item itemvalue="JUnit.EmployeePayrollTest.givenEmployeeDataInJSONServer_WhenRetrieved_ShouldMatchTheCount" />
         <item itemvalue="JUnit.EmployeePayrollTest.givenListOfNewEmployee_WhenAdded_ShouldMatch201ResponseAndCount" />
@@ -134,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606316198437</updated>
       <workItem from="1606316204147" duration="10946000" />
-      <workItem from="1606329927650" duration="1238000" />
+      <workItem from="1606329927650" duration="2616000" />
     </task>
     <servers />
   </component>
